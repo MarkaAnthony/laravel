@@ -22,7 +22,7 @@
             <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Customers <span class="caret"></span></button>
             <ul class="dropdown-menu">
               <li>
-                <a  data-toggle="modal" data-target="#myModal">Sales Orders</a>
+                <a  data-toggle="modal" data-target="#salesOrders">Sales Orders</a>
               </li>
               <li>
                 <a href="#">Receive Payments</a>
@@ -31,13 +31,56 @@
                 <a href="#">Create Invoices</a>
               </li>
               <li>
-                <a href="#">Create Statements</a>
+                <a data-toggle="modal" data-target="#createSOA">Create Statements</a>
               </li>
             </ul>
-
+				
+				<div class="modal fade" id="createSOA" role="dialog">
+                    <div class="modal-dialog">
+                    
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header bg-primary">
+                          <button type="button" class="close bg-primary" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title bg-primary">Create Statement of Accounts</h4>
+                        </div>
+                        <div class="modal-body">
+						<div class="container">
+                          <div class="row">
+							  <div class="dropdown">
+							  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Select SOA Options*</button>
+								  <ul class="dropdown-menu container-fluid">
+								     
+									<li><a class="dropdown-item" href="#">Statement of Accounts By Date</a></li>
+									<li><a class="dropdown-item" href="#">Statement of Accounts By Period</a></li>
+									<li><a class="dropdown-item" href="#">All open transactions as of Period</a></li>
+								  </ul>
+							  </div>
+						  </div>
+						</div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <input type="text" name="" style="border-top : 0;border-left: 0;border-right: 0"/>              
+                              <br/>
+                              <label>Plate Number/ GTS Number</label>
+                            </div>
+                            <div class="col-md-6">
+                              <input type="text" name="" style="border-top : 0;border-left: 0;border-right: 0"/>
+                              <br/>
+                                <label>Date Of DTS Form</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
 
                 <!-- Modal -->
-                  <div class="modal fade" id="myModal" role="dialog">
+                  <div class="modal fade" id="salesOrders" role="dialog">
                     <div class="modal-dialog">
                     
                       <!-- Modal content-->
